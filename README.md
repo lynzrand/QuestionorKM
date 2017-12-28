@@ -6,10 +6,10 @@ the keyboard. The key map is showed below.
 
 ```
          [A]        [B]       [C]         [D]
-   `   1   2   3 \ 4   5 \ 6   7   8 / 9   0   -   =   \ BKSP
-  TAB |  Q   W   E \ R   T \ Y   U | I   O   P   [   ]  | \
-  CAPS \ A   S   D \ F   G \ H   J \ K   L   ;   '      | ENTER
-  SHIFT \ Z   X   C \ V   B \ N   M | ,   .   /        / SHIFT
+    `   1   2   3 \ 4   5 \ 6   7   8 / 9   0   -   =   | BKSP
+  TAB |  Q   W   E | R   T | Y   U | I   O   P   [   ]  | \
+  CAPS \ A   S   D | F   G | H   J | K   L   ;   '      | ENTER
+  SHIFT \ Z   X   C \ V   B \ N   M \ ,   .   /        / SHIFT
 
   Above all that, special functions are binded to following keys:
   [Check/Next]:   ENTER, SPACE

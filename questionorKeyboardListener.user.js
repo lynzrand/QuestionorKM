@@ -13,7 +13,7 @@ This script divides the keyboard into four main sections,
 which controls the four options:
 
          [A]        [B]       [C]         [D]
-   `   1   2   3 \ 4   5 \ 6   7   8 / 9   0   -   =   \ BKSP
+    `   1   2   3 \ 4   5 \ 6   7   8 / 9   0   -   =   | BKSP
   TAB |  Q   W   E \ R   T \ Y   U | I   O   P   [   ]  | \
   CAPS \ A   S   D \ F   G \ H   J \ K   L   ;   '      | ENTER
   SHIFT \ Z   X   C \ V   B \ N   M | ,   .   /        / SHIFT
@@ -69,11 +69,14 @@ which controls the four options:
   $(document).keydown(function (event) {
     var b = event.keyCode;
     var c = a[b];
-    console.log("KeyCode", b, "->", c);
-    if (c !== undefined && c != 0) {
-      if (c < 5 && c > 0)
-        $("label input")[c - 1].click();
+    // console.log("KeyCode", b, "->", c);
+    if (c !== undefined && c !== 0) {
+      if (c <= 4 && c > 0){
+        // clicks option
+        $("label input")[c - 1].click()
+      }
       else if (c == 6) {
+        // auto check & skip
         if (unchecked) {
           unchecked = 0;
           $(".qs-practice-btn-check").click();
@@ -82,9 +85,11 @@ which controls the four options:
           $(".qs-practice-btn-next").click();
         }
       } else if (c == 7) {
+        // skip
         unchecked = 1;
         $(".qs-practice-btn-next").click();
       } else if (c == 8) {
+        // clear all
         var options = $("label input").each(function (i, e) {
           e.checked = false;
         });
