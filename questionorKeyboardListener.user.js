@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Questionor Keyboard Listener
 // @namespace    https://01010101lzy.github.io
-// @version      0.1
+// @version      0.25
 // @description  Faster practice with keyboard!
 // @author       Lynz Rand
 // @match        *questionor.cn/*/practice
