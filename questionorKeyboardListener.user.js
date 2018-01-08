@@ -25,7 +25,7 @@ This script maps keys to certain options so that faster practice is possible.
   SHIFT \ Z   X   C   V   B \ N   M   ,   .   /        / SHIFT
 
 more than 4 options:
-      `   1   2   3   4   5   6   7   8   9   0   -   =   | BKSP
+    `   1   2   3   4   5   6   7   8   9   0   -   =   | BKSP
   TAB |  Q   W   E   R   T   Y   U   I   O   P   [   ]  | \
   CAPS \[a] [b] [c] [d]  G   H  [e] [f] [g] [h]  '      | ENTER
   SHIFT \ Z   X   C   V   B   N   M   ,   .   /        / SHIFT
