@@ -20,7 +20,7 @@ the keyboard. The key map is showed below.
   SHIFT \ Z   X   C   V   B \ N   M   ,   .   /        / SHIFT
 
 more than 4 options:
-      `   1   2   3   4   5   6   7   8   9   0   -   =   | BKSP
+    `   1   2   3   4   5   6   7   8   9   0   -   =   | BKSP
   TAB |  Q   W   E   R   T   Y   U   I   O   P   [   ]  | \
   CAPS \[a] [b] [c] [d]  G   H  [e] [f] [g] [h]  '      | ENTER
   SHIFT \ Z   X   C   V   B   N   M   ,   .   /        / SHIFT
@@ -44,9 +44,14 @@ This script is created by Lynz Rand, and licensed under GPLv3 License.
 
 ## Changelog
 
+### 0.28
+
+- Added some annotations
+- Simplified some code
+
 ### 0.27
 
-- Add support for multiple option configurations
+- Added support for multiple option configurations
 
 ### 0.25
 
