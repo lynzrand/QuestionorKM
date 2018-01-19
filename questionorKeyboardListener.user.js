@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Questionor Keyboard Listener
 // @namespace    https://github.com/01010101lzy/QuestionorKM
-// @version      0.28
+// @version      0.29
 // @description  Faster practice with keyboard!
 // @author       Lynz Rand
 // @match        *questionor.cn/*/practice
@@ -39,12 +39,12 @@ more than 4 options:
 (function () {
   'use strict';
   var unchecked = 1;
-  // 1 to -3 are for selecting options
+  // 1 to 8 are for selecting options
   // -1 is auto-check 
   // -2 is force skip
   // -3 is clear all
   var a = new Array(new Array(
-      // 1 ops
+      // 2 options:
       0, 0, 0, 0, 0, 0, 0, 0, -2, -1, 0, 0, -2, -1, 0, 0,
       0, 0, 0, 0, 0, 0, 0, 0,
       0, 0, 0, -2, 0, 0, 0, 0, -1, 0, -1, 0, 0, 0, 0, 0,
@@ -73,6 +73,7 @@ more than 4 options:
       0, 2, 2, 2, -2, 0, 0, 0
     ),
     new Array(
+      // 3 or 4 options:
       0, 0, 0, 0, 0, 0, 0, 0, -3, -2, 0, 0, -3, -1, 0, 0,
       0, 0, 0, 0, 0, 0, 0, 0,
       0, 0, 0, -3, 0, 0, 0, 0, -1, 0, -2, 0, 0, 0, 0, 0,
@@ -101,6 +102,7 @@ more than 4 options:
       0, 4, 4, 4, -3, 0, 0, 0
     ),
     new Array(
+      // 5 to 8 options:
       0, 0, 0, 0, 0, 0, 0, 0, -3, -2, 0, 0, -3, -1, 0, 0,
       0, 0, 0, 0, 0, 0, 0, 0,
       0, 0, 0, -3, 0, 0, 0, 0, -1, 0, -2, 0, 0, 0, 0, 0,
@@ -137,18 +139,13 @@ more than 4 options:
     var l = $("label input").length;
     var c;
     switch (l) {
+      case 1:
       case 2:
         c = a[0][b];
         break;
       case 3:
       case 4:
         c = a[1][b];
-        break;
-      case 5:
-      case 6:
-      case 7:
-      case 8:
-        c = a[2][b];
         break;
       default:
         c = a[2][b];
