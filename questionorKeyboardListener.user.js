@@ -192,7 +192,7 @@ more than 4 options:
 })();
 
 $('document').ready(function () {
-  $('.qs-practice-progress').append('<div id="local-rate" class="progressbar-text" style="color: black; text-align: center; padding: 0.33em; font-size: 0.666em"> </div>');
+  $('.qs-practice-progress').append('<div class="progressbar-text"><div id="local-rate" style="color: black; text-align: center; padding: 0.33em; font-size: 0.66em"> </div></div>');
 });
 
 let correct = 0,
