@@ -44,6 +44,10 @@ This script is created by Lynz Rand, and licensed under GPLv3 License.
 
 ## Changelog
 
+### 0.28
+
+- Add test results for current session
+
 ### 0.27
 
 - Add support for multiple option configurations

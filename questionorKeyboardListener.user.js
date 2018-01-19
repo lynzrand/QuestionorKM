@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Questionor Keyboard Listener
-// @namespace    https://01010101lzy.github.io
-// @version      0.27
+// @namespace    https://github.com/01010101lzy/QuestionorKM
+// @version      0.28
 // @description  Faster practice with keyboard!
 // @author       Lynz Rand
 // @match        *questionor.cn/*/practice
@@ -130,6 +130,8 @@ more than 4 options:
   a[0][251] = 2; // too far away.
   a[1][254] = 4; // too far away.
   a[2][186] = 8; // too far away.
+
+
   $(document).keydown(function (event) {
     var b = event.keyCode;
     var l = $("label input").length;
@@ -167,6 +169,14 @@ more than 4 options:
           unchecked = 0;
           $(".qs-practice-btn-check").click();
         } else {
+          if ($(".qs-practice-btn-check.btn-success").length > 0) {
+            correct++;
+            total++;
+          } else {
+            total++;
+          }
+          var rate = (total == 0) ? ("N/A") : (correct / total * 100).toFixed(2);
+          $("#local-rate").text("Current Session: total " + total + ", correct " + correct + ", correct rate " + rate + "%");
           unchecked = 1;
           $(".qs-practice-btn-next").click();
         }
@@ -183,3 +193,10 @@ more than 4 options:
     }
   });
 })();
+
+$('document').ready(function () {
+  $('.qs-practice-progress').append('<div id="local-rate" class="progressbar-text" style="color: black; text-align: center; padding: 0.33em; font-size: 0.666em"> </div>');
+});
+
+let correct = 0,
+  total = 0;
