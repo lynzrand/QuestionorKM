@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Questionor Keyboard Listener
 // @namespace    https://github.com/01010101lzy/QuestionorKM
-// @version      0.29
+// @version      0.29.5
 // @description  Faster practice with keyboard!
 // @author       Lynz Rand
 // @match        *questionor.cn/*/practice
@@ -61,7 +61,7 @@ more than 4 options:
       2, 1,
       0, 0, 0, 0, 0,
       // keypad
-      -2, 1, 1, 2, 2,
+      -2, 1, 2, 0, 0,
       0, 0, 0, 0, 0, -1, -1, 0, -1, -1, -1, -1,
       // Fn
       0, 0, 0, 0, 0, 0,
@@ -193,6 +193,20 @@ more than 4 options:
 
 $('document').ready(function () {
   $('.qs-practice-progress').append('<div class="progressbar-text"><div id="local-rate" style="color: black; text-align: center; padding: 0.33em; font-size: 0.66em"> </div></div>');
+
+  // _ BELOW ARE UNFINISHED CODE FOR SETTING PAGE
+
+  // $('ul.navbar-right').append('<li id="qkm-config" class="dropdown"></li>');
+  // $('#qkm-config').append(['<a id="qkm-cfg-dropdn" href="#" class="dropdown-toggle" data-toggle="dropdown" style="color: rgb(255, 83, 46); font-weight: bold;" aria-expanded="false">',
+  //   'QuestionorKM Config',
+  //   '</a>'
+  // ].join('\n'));
+  // $('#qkm-config').append(
+  //   '<ul class="dropdown-menu"> \
+  //     <!-- User Profile --> \
+  //     <li> \
+  //       < <\
+  //       /ul>')
 });
 
 let correct = 0,

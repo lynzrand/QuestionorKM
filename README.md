@@ -44,6 +44,10 @@ This script is created by Lynz Rand, and licensed under GPLv3 License.
 
 ## Changelog
 
+### 0.29.5
+
+- Fix: wrong key map on keypad
+
 ### 0.29
 
 - Add test results for current session
