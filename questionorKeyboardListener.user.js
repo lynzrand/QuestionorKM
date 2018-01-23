@@ -5,7 +5,7 @@
 // @description  Faster practice with keyboard!
 // @author       Lynz Rand
 // @match        *questionor.cn/*/practice
-// @grant        none
+// @grant        GPLv3
 // ==/UserScript==
 
 /*
