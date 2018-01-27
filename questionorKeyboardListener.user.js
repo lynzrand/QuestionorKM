@@ -162,8 +162,12 @@ more than 4 options:
         }
       } else if (c == -1) {
         // auto check & skip
-        if (unchecked) {
+        if ($(".qs-practice-btn-check.btn-success").length > 0 || $(".qs-practice-btn-check.btn-danger").length > 0 || $(".qs-practice-btn-check.btn-warning").length > 0)
           unchecked = 0;
+        else
+          unchecked = 1;
+        if (unchecked) {
+          // unchecked = 0;
           $(".qs-practice-btn-check").click();
         } else {
           if ($(".qs-practice-btn-check.btn-success").length > 0) {
@@ -174,12 +178,12 @@ more than 4 options:
           }
           var rate = (total == 0) ? ("N/A") : (correct / total * 100).toFixed(2);
           $("#local-rate").text("Current Session: total " + total + ", correct " + correct + ", correct rate " + rate + "%");
-          unchecked = 1;
+          // unchecked = 1;
           $(".qs-practice-btn-next").click();
         }
       } else if (c == -2) {
         // skip
-        unchecked = 1;
+        // unchecked = 1;
         $(".qs-practice-btn-next").click();
       } else if (c == -3) {
         // clear all
